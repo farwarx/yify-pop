@@ -78,8 +78,13 @@
 
         video += '<source src=' + streamURL + ' type="video/mp4">';
 
+				var languageDefault = "fr" ;
         for (var sub in subs) {
-          video += '<track kind="subtitles" src=' + subs[sub] + ' srclang=' + languageMapping[sub] + ' label=' + sub + '>';
+					if ( sub == languageDefault ) {
+						video += '<track kind="subtitles" src=' + subs[sub] + ' srclang=' + languageMapping[sub] + ' label=' + sub + ' default>';
+					} else {
+	          video += '<track kind="subtitles" src=' + subs[sub] + ' srclang=' + languageMapping[sub] + ' label=' + sub + '>';
+					}
         }
 
         video +=  '/></video>';
