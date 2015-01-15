@@ -94,6 +94,7 @@ var Main = function () {
       if (decodeURIComponent(params.file) === geddy.config.streamingProcesses[i].torrent) {
         streamURL = geddy.config.streamingProcesses[i].stream;
         subtitles = geddy.config.streamingProcesses[i].subtitles;
+				data = geddy.config.streamingProcesses[i].data;
       }
     }
 

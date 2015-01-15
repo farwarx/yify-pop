@@ -95,6 +95,7 @@ exports.create = function(self, streamURL, hostname, params) {
                 self.respond({
                   params: params,
                   streamURL: streamURL,
+									data: data,
                   subtitles: subtitles
                 }, {
                   format: 'html',
@@ -153,6 +154,7 @@ exports.create = function(self, streamURL, hostname, params) {
               self.respond({
                 params: params,
                 streamURL: streamURL,
+								data: data,
                 subtitles: subtitles
               }, {
                 format: 'html',
