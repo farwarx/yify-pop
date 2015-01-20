@@ -20,6 +20,7 @@ var yify = require('../helpers/yify');
 var eztv = require('../helpers/eztv');
 var streams = require('../helpers/streams');
 var passport = require('../helpers/passport')
+  , cryptPass = passport.cryptPass
   , requireAuth = passport.requireAuth;
 
 var Main = function () {

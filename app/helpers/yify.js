@@ -25,7 +25,7 @@ if (params.keywords && params.keywords !=='') {
     yify.search = '&keywords=' + params.keywords;
   }
   
-  var oldURL = baseURL + '?sort=' + yify.sort + '&genre=' + yify.genre + yify.search;
+  var oldURL = baseURL + '/movies?sort=' + yify.sort + '&genre=' + yify.genre + yify.search;
 
   yify.previousDisabled = 'disabled';
   yify.nextDisabled = '';

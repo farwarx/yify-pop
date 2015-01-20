@@ -3,11 +3,13 @@ var CreateUsers = function () {
     var def = function (t) {
           t.column('username', 'string');
           t.column('password', 'string');
-          t.column('familyName', 'string');
+          t.column('name', 'string');
           t.column('givenName', 'string');
           t.column('email', 'string');
           t.column('activationToken', 'string');
           t.column('activatedAt', 'datetime');
+          t.column('avatar', 'string');
+          t.column('language', 'string');
         }
       , callback = function (err, data) {
           if (err) {

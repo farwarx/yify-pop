@@ -19,8 +19,9 @@
 
 var router = new geddy.RegExpRouter();
 
-router.get('/').to('Main.index');
+router.get('/').to('Main.login');
 router.get('/shows').to('Shows.index');
+router.get('/movies').to('Main.index');
 router.get('/show').to('Shows.show');
 router.get('/stream').to('Main.stream');
 router.get('/running').to('Main.running');

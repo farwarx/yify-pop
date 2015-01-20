@@ -1,12 +1,16 @@
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title"><%= episode.title %></h3>
+    <p class="panel-title">
+			<%= episode.title %>
+			<img src="img/icons/favoris-no-32.png">
+			<img src="img/icons/seen-no-32.png">
+			<%= imdb_id %><%= episode.season %><%= episode.episode %>
   </div>
   <div class="panel-body">
     <div class="media show">
       <div class="media-body">
         <p class="lead">Season <%= episode.season %> - Episode <%= episode.episode %></p>
-        <p><%= moment(episode.first_aired * 1000).format('LL') %></p>
+				<p><%= moment(episode.first_aired * 1000).format('LL') %></p>
         <p><%= episode.overview %></p>
         <% if (episode.torrents && Object.keys(episode.torrents).length > 0) { %>
 	  <br/>

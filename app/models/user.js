@@ -2,11 +2,12 @@ var User = function () {
   this.defineProperties({
     username: {type: 'string', required: true, on: ['create', 'update']}
   , password: {type: 'string', required: true, on: ['create', 'update']}
-  , familyName: {type: 'string', required: true}
-  , givenName: {type: 'string', required: true}
+  , name: {type: 'string', required: true}
   , email: {type: 'string', required: true, on: ['create', 'update']}
   , activationToken: {type: 'string'}
   , activatedAt: {type: 'datetime'}
+  , language: {type: 'string', required: true, on: ['create', 'update']}
+	, avatar: {type: 'string', required: false, on: ['create', 'update']}
   });
 
   this.validatesLength('username', {min: 3});

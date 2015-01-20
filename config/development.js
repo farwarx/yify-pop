@@ -33,9 +33,10 @@ var config = {
   }
 , assetBasePath: '/'
 , passport: {
-    successRedirect: "/",
+    successRedirect: "/movies",
     failureRedirect: "/login",
   }
+, secret: "MY SECRET KEY"
 };
 
 module.exports = config;

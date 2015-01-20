@@ -14,6 +14,18 @@
 <div class="watch">
   <a class="btn btn-success" href="<%= streamURL %>">Watch Now</a>
 </div>
+<div>
+<p>data.title: <%= data.title %>
+<p>Send to test Kodi: <a href='http://kodi:kodi@localhost:8081/jsonrpc?request={"jsonrpc":"2.0","method":"Addons.ExecuteAddon","params":{"addonid":"plugin.video.stream.player","params":{"url":"<%= streamURL %>","title":"<%= data.title %>","thumb":"<%= data.cover %>","lang":"french","subtitle":<%= JSON.stringify(subtitles['french']) %>}},"id":1}'>movie</a>
+/ <a href='http://kodi:kodi@localhost:8081/jsonrpc?request={"jsonrpc":"2.0","method":"Addons.ExecuteAddon","params":{"addonid":"plugin.video.stream.player","params":{"url":"<%= streamURL %>","title":"<%= data.title %>","thumb":"<%= data.cover %>","lang":"fr","subtitle":<%= JSON.stringify(subtitles['fr']) %>}},"id":1}'>show</a>
+<p>Send to appart Kodi: <a href='http://kodi:kodi@192.168.10.33:80/jsonrpc?request={"jsonrpc":"2.0","method":"Addons.ExecuteAddon","params":{"addonid":"plugin.video.stream.player","params":{"url":"<%= streamURL %>","title":"<%= data.title %>","thumb":"<%= data.cover %>","lang":"french","subtitle":<%= JSON.stringify(subtitles['french']) %>}},"id":1}'>movie</a>
+/ <a href='http://kodi:kodi@192.168.10.33:80/jsonrpc?request={"jsonrpc":"2.0","method":"Addons.ExecuteAddon","params":{"addonid":"plugin.video.stream.player","params":{"url":"<%= streamURL %>","title":"<%= data.title %>","thumb":"<%= data.cover %>","lang":"fr","subtitle":<%= JSON.stringify(subtitles['fr']) %>}},"id":1}'>show</a>
+<p>streamURL:<a href="<%= streamURL %>"><%= streamURL %></a>
+<p>subtitles french: <%= JSON.stringify(subtitles['french']) %>
+<p>subtitles fr: <%= JSON.stringify(subtitles['fr']) %>
+<p>imdb id: <%= params.id %>
+
+</div>
 
 <script>
   var streamURL = "<%= streamURL %>";
@@ -91,7 +103,7 @@
 
         $('.player').append(video);
         _V_('player');
-        _V_('player').play();
+        //_V_('player').play();
 
       }
       

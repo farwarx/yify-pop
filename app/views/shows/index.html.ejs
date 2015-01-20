@@ -5,7 +5,12 @@
         <div class="col-sm-4">
       		<div class="panel panel-default">
         		<div class="panel-heading">
-          		<h3 class="panel-title"><%= shows[i].title %></h3></div>
+          		<p class="panel-title">
+								<%= shows[i].title %>
+								<img src="img/icons/favoris-no-32.png">
+								<img src="img/icons/seen-no-32.png">
+								<%= shows[i].imdb_id %>
+						</div>
           		<div class="panel-body">
             		<div class="media movie">
                     <a class="pull-left" href="<%= baseURL %>/show?id=<%= shows[i].imdb_id %>">
